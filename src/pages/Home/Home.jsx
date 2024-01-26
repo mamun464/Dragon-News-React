@@ -7,8 +7,9 @@ import LeftSideNav from './../Shared/LeftSideNav/LeftSideNav';
 const Home = () => {
     return (
         <div className="font-Poppins ">
-            <NavBar></NavBar>
             <Header></Header>
+            <NavBar></NavBar>
+
             <h1 className="text-3xl">This is Home</h1>
             <div className="grid grid-cols-1  md:grid-cols-4 gap-6">
 
