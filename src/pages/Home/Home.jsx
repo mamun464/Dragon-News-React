@@ -2,12 +2,14 @@ import Header from "../Shared/Header/Header";
 import NavBar from "../Shared/NavBar/NavBar";
 import RightSideNav from "../Shared/RightSideNav/RightSideNav";
 import LeftSideNav from './../Shared/LeftSideNav/LeftSideNav';
+import BreakingNews from "./BreakingNews";
 
 
 const Home = () => {
     return (
         <div className="font-Poppins ">
             <Header></Header>
+            <BreakingNews></BreakingNews>
             <NavBar></NavBar>
 
             <h1 className="text-3xl">This is Home</h1>
