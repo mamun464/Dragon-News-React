@@ -1,0 +1,22 @@
+/* RatingStar.css */
+
+.rating-stars {
+    display: flex;
+    gap: 6px;
+    /* Use flexbox to arrange stars in a row */
+}
+
+.star {
+    font-size: 20px;
+    /* Adjust the size of the stars */
+}
+
+.orange {
+    color: orange;
+    /* Color of the filled stars */
+}
+
+.gray {
+    color: rgba(172, 172, 172, 0.563);
+    /* Color of the empty stars */
+}

@@ -1,0 +1,14 @@
+/* Your CSS file */
+
+.background-image-container {
+    background-image: url('https://i.ibb.co/9GTszP7/bg.png');
+    /* Link to the image */
+    background-size: cover;
+    /* Cover the entire container with the background image */
+    background-position: center;
+    /* Center the background image */
+    width: 100%;
+    /* Set the width of the container */
+    height: 100%;
+    /* Set the height of the container */
+}

@@ -2,6 +2,7 @@ import { FaGithub, FaGoogle } from 'react-icons/fa';
 import zone1 from '/qZone1.png'
 import zone2 from '/qZone2.png'
 import zone3 from '/qZone3.png'
+import './RightSideNav.css'
 
 const RightSideNav = () => {
     return (
@@ -65,6 +66,14 @@ const RightSideNav = () => {
                 <img className='mb-5 w-full p-2' src={zone1} alt="zone1_img_not_found" />
                 <img className='mb-5 w-full p-2' src={zone2} alt="zone2_img_not_found" />
                 <img className='w-full p-2' src={zone3} alt="zone3_img_not_found" />
+            </div>
+
+            <div className="background-image-container py-16 px-10">
+                <h1 className='text-center text-3xl text-white mb-4 font-bold leading-10'>Create an Amazing Newspaper</h1>
+                <p className='text-white leading-6 text-center mb-7'>Discover thousands of options, easy to customize layouts, one-click to import demo and much more.</p>
+                <div className='flex justify-center'>
+                    <button className='text-white px-[18px] rounded-sm py-[17px] bg-[#D72050] text-xl font-semibold  hover:bg-[#9F1133]'>Learn More</button>
+                </div>
             </div>
         </div>
     );

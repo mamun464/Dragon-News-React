@@ -1,11 +1,22 @@
+import { useEffect, useState } from "react";
 import Header from "../Shared/Header/Header";
 import NavBar from "../Shared/NavBar/NavBar";
 import RightSideNav from "../Shared/RightSideNav/RightSideNav";
 import LeftSideNav from './../Shared/LeftSideNav/LeftSideNav';
 import BreakingNews from "./BreakingNews";
+import HomeMiddleCard from "./HomeMiddleCard";
 
 
 const Home = () => {
+    const [allNews, setAllNews] = useState([])
+
+    useEffect(() => {
+        fetch('/news.json')
+            .then(res => res.json())
+            .then(data => setAllNews(data))
+    }
+        , [])
+
     return (
         <div className="font-Poppins ">
             <Header></Header>
@@ -19,8 +30,14 @@ const Home = () => {
                     <LeftSideNav></LeftSideNav>
                 </div>
 
-                <div className="md:col-span-2 border">
-                    <h1 className="text-2xl"> Comming Soon</h1>
+                <div className="md:col-span-2">
+                    {
+                        allNews.map((news, idx) => <HomeMiddleCard
+                            key={idx}
+                            news={news}
+                        ></HomeMiddleCard>)
+                    }
+
                 </div>
 
                 <div className="border">
