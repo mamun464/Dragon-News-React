@@ -89,7 +89,7 @@ const LeftSideNav = ({ filterData }) => {
 };
 
 LeftSideNav.propTypes = {
-    filterData: PropTypes.object.isRequired,
+    filterData: PropTypes.func.isRequired,
 };
 
 export default LeftSideNav;
