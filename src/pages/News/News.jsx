@@ -22,10 +22,17 @@ const News = () => {
 
     }
         , [id])
+
+    const navInfo = {
+        button_text: "My Profile",
+        button_link: "/Profile"
+    }
     return (
         <div className=" max-w-6xl mx-auto">
             <Header></Header>
-            <NavBar></NavBar>
+            <NavBar
+                navInfo={navInfo}
+            ></NavBar>
             <div className="grid md:grid-cols-4">
 
                 <div className="border col-span-3 p-5 rounded-md mt-10 h-fit">
