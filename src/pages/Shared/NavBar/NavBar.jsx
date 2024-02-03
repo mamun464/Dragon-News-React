@@ -10,7 +10,7 @@ const NavBar = () => {
 
     </>
     return (
-        <div className="navbar bg-base-100 mt-8">
+        <div className="navbar mb-3">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -28,13 +28,13 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar mr-2">
+                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar mr-2" onClick={() => { window.location.href = '/login'; }}>
                     <div className="w-10 rounded-full">
                         <img alt="Defult_User_pic_notFound" src={userDefaultPic} />
                     </div>
                 </div>
-                <Link>
-                    <button className="text-xl font-medium text-white py-2 px-6 bg-[#403F3F]">Login</button>
+                <Link to={'/login'}>
+                    <button className="btn text-xl font-medium text-white py-2 px-6 bg-[#403F3F] rounded-none hover:text-black">Login</button>
                 </Link>
             </div>
         </div>

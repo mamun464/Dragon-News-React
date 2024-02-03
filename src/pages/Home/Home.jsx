@@ -9,30 +9,48 @@ import HomeMiddleCard from "./HomeMiddleCard";
 
 const Home = () => {
     const [allNews, setAllNews] = useState([])
+    const [displayData, setDisplayData] = useState([])
 
     useEffect(() => {
         fetch('/news.json')
             .then(res => res.json())
-            .then(data => setAllNews(data))
+            .then(data => {
+                setAllNews(data)
+                setDisplayData(data)
+            })
+
     }
         , [])
 
+    const filterData = (id) => {
+        if (id == 0) {
+            setDisplayData(allNews);
+        } else {
+            const filtered = allNews.filter(news => news?.category_id === id);
+            setDisplayData(filtered);
+        }
+
+
+    }
+
     return (
-        <div className="font-Poppins ">
+        <div className="font-Poppins max-w-6xl mx-auto">
             <Header></Header>
             <BreakingNews></BreakingNews>
             <NavBar></NavBar>
 
-            <h1 className="text-3xl">This is Home</h1>
+
             <div className="grid grid-cols-1  md:grid-cols-4 gap-6">
 
-                <div className="border">
-                    <LeftSideNav></LeftSideNav>
+                <div className=" ">
+                    <LeftSideNav
+                        filterData={filterData}
+                    ></LeftSideNav>
                 </div>
 
                 <div className="md:col-span-2">
                     {
-                        allNews.map((news, idx) => <HomeMiddleCard
+                        displayData.map((news, idx) => <HomeMiddleCard
                             key={idx}
                             news={news}
                         ></HomeMiddleCard>)
@@ -40,7 +58,7 @@ const Home = () => {
 
                 </div>
 
-                <div className="border">
+                <div className=" ">
                     <RightSideNav></RightSideNav>
                 </div>
             </div>

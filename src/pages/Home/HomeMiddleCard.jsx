@@ -17,9 +17,9 @@ const HomeMiddleCard = ({ news }) => {
                         {author?.published_date && author.published_date.split(' ')[0]}
                     </div>
                 </div>
-                <div className="flex gap-3 text-[#706F6F] text-2xl">
-                    <CiBookmark />
-                    <CiShare2 />
+                <div className="flex gap-3 text-[#706F6F] text-2xl cursor-pointer ">
+                    <CiBookmark className="hover:text-[#9F1133]" />
+                    <CiShare2 className="hover:text-[#9F1133]" />
                 </div>
 
             </div>
