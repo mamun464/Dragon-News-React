@@ -8,14 +8,22 @@ const Login = () => {
         console.log(form.get('password'));
 
     };
-    return (
-        <div className="bg-[#f3f3f3] w-screen h-screen font-Poppins">
 
-            <div className="py-7 px-7">
-                <NavBar />
+    const navInfo = {
+        button_text: "Register",
+        button_link: "/registration"
+    }
+
+    return (
+        <div className="bg-[#f3f3f3] min-h-screen font-Poppins flex flex-col justify-center items-center">
+
+            <div className="px-7 w-full">
+                <NavBar
+                    navInfo={navInfo}
+                ></NavBar>
             </div>
-            <div>
-                <div className="md:w-3/4 lg:w-1/2 mx-auto bg-white px-11 py-10 rounded-md">
+            <div className="w-full max-w-md">
+                <div className="mx-auto bg-white px-8 py-10 rounded-md">
                     <h1 className="text-3xl text-center mb-8">Login your account</h1>
 
                     <hr />

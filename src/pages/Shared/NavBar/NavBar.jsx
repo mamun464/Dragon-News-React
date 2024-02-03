@@ -1,14 +1,16 @@
 import { Link, NavLink } from "react-router-dom";
 import userDefaultPic from '/user.png'
+import { PropTypes } from 'prop-types';
 
 
-const NavBar = () => {
+const NavBar = ({ navInfo }) => {
     const navLinks = <>
         <li><NavLink to={"/"}>Home</NavLink></li>
         <li><NavLink to={"/about"}>About</NavLink></li>
         <li><NavLink to={"/career"}>Career</NavLink></li>
 
     </>
+    // const { button_link, button_text } = navInfo;
     return (
         <div className="navbar mb-3">
             <div className="navbar-start">
@@ -33,12 +35,16 @@ const NavBar = () => {
                         <img alt="Defult_User_pic_notFound" src={userDefaultPic} />
                     </div>
                 </div>
-                <Link to={'/login'}>
-                    <button className="btn text-xl font-medium text-white py-2 px-6 bg-[#403F3F] rounded-none hover:text-black">Login</button>
+                <Link to={navInfo?.button_link || "/"}>
+                    <button className="btn text-xl font-medium text-white py-2 px-6 bg-[#403F3F] rounded-none hover:text-black">{navInfo?.button_text || "Loading..."}</button>
                 </Link>
             </div>
         </div>
     );
+};
+
+NavBar.propTypes = {
+    navInfo: PropTypes.object.isRequired,
 };
 
 export default NavBar;

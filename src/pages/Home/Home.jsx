@@ -33,11 +33,18 @@ const Home = () => {
 
     }
 
+    const navInfo = {
+        button_text: "Login",
+        button_link: "/login",
+    }
+
     return (
         <div className="font-Poppins max-w-6xl mx-auto">
             <Header></Header>
             <BreakingNews></BreakingNews>
-            <NavBar></NavBar>
+            <NavBar
+                navInfo={navInfo}
+            ></NavBar>
 
 
             <div className="grid grid-cols-1  md:grid-cols-4 gap-6">
