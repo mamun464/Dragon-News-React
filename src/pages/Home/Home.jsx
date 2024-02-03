@@ -57,8 +57,8 @@ const Home = () => {
 
                 <div className="md:col-span-2">
                     {
-                        displayData.map((news, idx) => <HomeMiddleCard
-                            key={idx}
+                        displayData.map((news) => <HomeMiddleCard
+                            key={news._id}
                             news={news}
                         ></HomeMiddleCard>)
                     }

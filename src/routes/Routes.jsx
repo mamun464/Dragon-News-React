@@ -3,6 +3,7 @@ import Root from "../layouts/Root";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login&Registration/Login";
 import Registration from "../pages/Login&Registration/Registration";
+import News from "../pages/News/News";
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
             {
                 path: "/category/:id",
                 element: <Home></Home>
+            },
+            {
+                path: "/news/:id",
+                element: <News></News>
             },
             {
                 path: "/login",

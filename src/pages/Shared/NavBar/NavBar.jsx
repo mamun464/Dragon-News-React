@@ -27,6 +27,8 @@ const NavBar = ({ navInfo }) => {
             .catch(err => {
                 console.error(err);
             })
+
+
     }
     // const { button_link, button_text } = navInfo;
     return (

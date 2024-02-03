@@ -6,7 +6,7 @@ import { FaEye } from "react-icons/fa";
 import PropTypes from 'prop-types';
 
 const HomeMiddleCard = ({ news }) => {
-    const { title, details, total_view, author, image_url, rating } = news;
+    const { _id, title, details, total_view, author, image_url, rating } = news;
     return (
         <div className="mb-7">
             <div className="py-5 px-5 flex justify-between items-center bg-[#F3F3F3] rounded-t-md">
@@ -30,7 +30,7 @@ const HomeMiddleCard = ({ news }) => {
                 <p className="text-[#706F6F] font-normal line-clamp-3 mt-8">
                     {details}
                 </p>
-                <span className="text-[#FF8C47] hover:text-[#F75B5F]"><Link to={"/news"}>Read More</Link></span>
+                <span className="text-[#FF8C47] hover:text-[#F75B5F]"><Link to={`/news/${_id}`}>Read More</Link></span>
                 <hr className="mt-5" />
                 <div className="flex items-center justify-between mt-4">
                     <div className="flex items-center gap-3">
